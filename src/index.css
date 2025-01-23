@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/Fonts/Poppins-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/Fonts/Poppins-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/Fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/Fonts/Poppins-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/Fonts/Poppins-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/Fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/Fonts/Poppins-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/Fonts/Poppins-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/Fonts/Poppins-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/Fonts/Poppins-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/Fonts/Poppins-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/Fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/Fonts/Poppins-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/Fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/Fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/Fonts/Poppins-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/Fonts/Poppins-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/Fonts/Poppins-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Applying the font family to the body */
+body {
+    @apply font-poppins;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+
+@layer components{
+    .rotate-180{
+      transform: rotate(180deg);
+    }
+ }
+
+
+
+ .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.marquee-column {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.marquee-content {
+    display: flex;
+    flex-direction: column;
+    animation-timing-function: linear;
+    
+}
+
+.marquee-column-1 .marquee-content {
+   animation: marquee-vertical-1 25s linear infinite;
+}
+
+.marquee-column-2 .marquee-content {
+    animation: marquee-vertical-2 20s linear infinite;
+}
+
+.marquee-column-3 .marquee-content {
+    animation: marquee-vertical-3 30s linear infinite;
+}
+
+@keyframes marquee-vertical-1 {
+   from { transform: translateY(0); }
+   to { transform: translateY(-100%); }
+}
+
+@keyframes marquee-vertical-2 {
+   from { transform: translateY(0); }
+   to { transform: translateY(-100%); }
+}
+
+@keyframes marquee-vertical-3 {
+   from { transform: translateY(0); }
+   to { transform: translateY(-100%); }
+}
